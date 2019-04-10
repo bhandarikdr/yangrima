@@ -1,0 +1,78 @@
+<html>
+<style type="text/css">
+body{
+position:absolute;
+height:800px;
+width:800px;
+background:#CCCCCC;
+}
+.slides{
+top:150px;
+left:50px;
+position:absolute;
+height:400px;
+width:600px;
+background:#333333;
+border-color:#00FFFF;
+border-bottom-width:thick;
+}
+.bio{
+top:150px;
+left:680px;
+position:absolute;
+height:400px;
+width:600px;
+background:#333333;
+border-color:#00FFFF;
+border-bottom-width:thick;
+}
+.img1{
+top:5px;
+left:5px;
+position:absolute;
+height:390px;
+width:590px;
+}
+</style >
+
+<script type="text/javascript">
+var count=1; //counter
+var IMG_NO=4; // set no of images
+var imgUrl = new Array(); // image urls array
+
+function init(){
+// set image urls
+imgUrl[1]="images/img1.jpg"; // your file name
+imgUrl[2]="images/img2.jpg";
+imgUrl[3]="images/img3.jpg";
+imgUrl[4]="images/img4.jpg";
+// and so on for all images ...
+
+// call slideShow function
+slideShow();
+}
+
+function slideShow() // function to show Images
+{
+var d=document.getElementById("img1");
+d.src=imgUrl[count];
+count++;
+if(count > IMG_NO)
+count=1;
+// call the same function in 2 sec
+setTimeout("slideShow()",3000);
+}
+</script >
+
+<head><title>My Photo Album</title></head>
+<body onload="init()">
+
+<div class="slides" align="left">
+<img class="img1" id="img1"></img>
+</div >
+<div class="bio" align="left">
+<h1 align="center"> <u>Description</u> </h1>
+
+
+</div>
+</body >

@@ -1,0 +1,35 @@
+<html>
+<head><title> HTML form test page </title>
+<script>
+function redirect() //check the username and password
+{
+let u=document.getElementById("usr").value;
+let p=document.getElementById("pss").value;
+//document.innerHTML(user+pass);
+let d=document.getElementById("act");
+//if(u=="test" && p=="test")
+d.action="http://172.18.96.1/fez/";
+//else document.write("Error! Couldnt login with["+user+"]["+pass)"]";
+let e=document.getElementById("err");
+e.document.innerHTML("error");
+}
+</script >
+</head>
+
+<body bgcolor="tan"><div align="center">
+<form id="act">
+<img src="e_pustakalaya.png"/>
+<hr/>
+<table border="0" cellpadding="0" cellspacing="0" width="30%">
+<tr><td>Username </td><td><input type="text" id="usr"></td></tr>
+<tr><br/></tr>
+<tr><td>Password </td><td><input type="password" id="pss"></td></tr>
+</table>
+<table border="1" width="25%">
+<tr><br/>
+<input type="submit" value="Login" onclick="redirect()"><br/><br/></tr>
+</table>
+<p>Login to E-pustakalaya</p>
+<div><p id="err"></p></div>
+</form></div></body></html>
+
